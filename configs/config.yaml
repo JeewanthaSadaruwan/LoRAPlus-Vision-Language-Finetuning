@@ -1,0 +1,33 @@
+# Starter settings; select a dataset and validate settings before training.
+model:
+  name: HuggingFaceTB/SmolVLM-256M-Instruct
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, v_proj]
+
+loraplus:
+  learning_rate_ratio: 16
+
+dataset:
+  name: null
+  train_split: train
+  eval_split: validation
+  image_column: null
+  text_column: null
+  answer_column: null
+
+training:
+  method: lora # lora or loraplus
+  learning_rate: 0.0001
+  epochs: 3
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  seed: 42
+  output_dir: checkpoints
+
+evaluation:
+  metrics_path: results/metrics.csv
+  plots_dir: results/plots

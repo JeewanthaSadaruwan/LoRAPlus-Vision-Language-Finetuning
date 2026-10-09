@@ -1,0 +1,55 @@
+# Python environments and build artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Downloaded datasets (TextVQA images and JSONL splits)
+/data/
+/datasets/
+
+# Downloaded models and adapter checkpoints; retain the directory placeholder
+/checkpoints/*
+!/checkpoints/.gitkeep
+
+# Hugging Face and other local caches
+.cache/
+.huggingface/
+hf_cache/
+
+# Model weights and exported models
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Training logs
+logs/
+runs/
+wandb/
+*.log
+
+# External reference repositories (research PDFs remain versioned)
+/references/external/
+

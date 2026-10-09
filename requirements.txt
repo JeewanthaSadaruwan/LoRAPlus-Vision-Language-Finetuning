@@ -1,0 +1,13 @@
+# Initial dependencies; compatible versions will need validation during implementation.
+torch
+transformers
+peft
+accelerate
+datasets
+Pillow
+PyYAML
+numpy
+pandas
+matplotlib
+jupyterlab
+ipykernel
